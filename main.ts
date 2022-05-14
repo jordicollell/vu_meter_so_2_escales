@@ -1,15 +1,4 @@
-let escala = 0
 input.onButtonPressed(Button.A, function () {
-    escala = 128
-    basic.showLeds(`
-        # # # . .
-        # . . # .
-        # # # . .
-        # . . # .
-        # # # . .
-        `)
-})
-input.onButtonPressed(Button.B, function () {
     escala = 255
     basic.showLeds(`
         . . # . .
@@ -19,6 +8,25 @@ input.onButtonPressed(Button.B, function () {
         # . . . #
         `)
 })
+input.onButtonPressed(Button.B, function () {
+    escala = 128
+    basic.showLeds(`
+        # # # . .
+        # . . # .
+        # # # . .
+        # . . # .
+        # # # . .
+        `)
+})
+let escala = 0
+escala = 255
+basic.showLeds(`
+    . . # . .
+    . # . # .
+    # . . . #
+    # # # # #
+    # . . . #
+    `)
 basic.forever(function () {
     if (input.soundLevel() > escala * 0.3 && input.soundLevel() < escala * 0.5) {
         pins.digitalWritePin(DigitalPin.P11, 0)
