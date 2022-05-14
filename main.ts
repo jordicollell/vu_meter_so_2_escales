@@ -46,8 +46,8 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (escala == 255) {
-        pins.servoWritePin(AnalogPin.P0, input.soundLevel() / 1.42)
+        pins.servoWritePin(AnalogPin.P0, 255 - input.soundLevel() / 1.42)
     } else {
-        pins.servoWritePin(AnalogPin.P0, input.soundLevel() / 0.71)
+        pins.servoWritePin(AnalogPin.P0, 255 - input.soundLevel() / 0.71)
     }
 })
