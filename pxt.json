@@ -1,5 +1,5 @@
 {
-    "name": "vu_meter",
+    "name": "vu_meter_2_escales",
     "description": "",
     "dependencies": {
         "core": "*",
